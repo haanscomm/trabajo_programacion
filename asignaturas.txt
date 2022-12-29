@@ -1,0 +1,8 @@
+Existen 6 asignaturas: 
+0.MATÉMATICAS
+ 1.LENGUA
+ 2.FÍSICA
+ 3.QUÍMICA
+ 4.HISTORIA
+ 5.INGLES
+ 
