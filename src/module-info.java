@@ -2,7 +2,7 @@
  * 
  */
 /**
- * @author Sara
+ * @author angel
  *
  */
 module trabajo_programacion {
