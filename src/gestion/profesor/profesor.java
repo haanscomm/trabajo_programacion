@@ -15,6 +15,7 @@ public class profesor {
 		asignatura.toUpperCase();
 		
 		mostrarMenu();
+		System.out.println("Prueba");
 		
 	}
 	
