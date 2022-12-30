@@ -51,7 +51,7 @@ public class profesor {
 			break; 
 		default: 
 			System.out.println("Introduce un la opcion válida\n");
-			
+			System.out.println("Hola sara que mal hueles");
 	
 		
 		}
