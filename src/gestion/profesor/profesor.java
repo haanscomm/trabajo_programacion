@@ -1,25 +1,28 @@
 package gestion.profesor;
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class profesor {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		// TODO Auto-generated method stub
 		
 		Scanner leer = new Scanner(System.in);
 		 
 		System.out.println("Introduzca la asignatura que desee gestionar:");
+		System.out.println(" MATÉMATICAS LENGUA FÍSICA  QUÍMICA  HISTORIA  INGLES");
+		
 		String asignatura = leer.next(); 
 		System.out.println(" ");
 		asignatura.toUpperCase();
 		
-		mostrarMenu();
+		mostrarMenu(asignatura);
 		System.out.println("Prueba");
 		
 	}
 	
-	public static void mostrarMenu() {
+	public static void mostrarMenu(String asignatura) throws FileNotFoundException {
 		
 		Scanner l = new Scanner(System.in);
 		
@@ -35,7 +38,7 @@ public class profesor {
 		switch(num) {
 		
 		case 1: 
-			introducirNotasAlumnos.introducirNotas();
+			introducirNotasAlumnos.introducirNotas(asignatura);
 			break; 
 		case 2: 
 			calcularAlumnos.calcularMedia();
@@ -51,7 +54,7 @@ public class profesor {
 			break; 
 		default: 
 			System.out.println("Introduce un la opcion válida\n");
-			System.out.println("Hola sara que mal hueles");
+			
 	
 		
 		}

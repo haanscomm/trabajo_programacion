@@ -1,12 +1,13 @@
 package ficheros;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 
 public class DNI_alumnos {
 
-	public static void main(String[] args) throws IOException {
+	public static void dni_alumnos() throws FileNotFoundException {
 		// TODO Auto-generated method stub
 
 		//Escribir 
@@ -15,7 +16,7 @@ public class DNI_alumnos {
 		
 		PrintWriter escribir = new PrintWriter(fichero);
 		
-		int [] numeroDNI = new int [15];
+		int [] numeroDNI = new int [5];
 	
 		
 		escribir.println("Existen " + numeroDNI.length + " alumnos");

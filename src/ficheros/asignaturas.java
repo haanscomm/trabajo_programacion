@@ -22,8 +22,7 @@ public class asignaturas {
 			
 			escribir.println(i + "." + asignaturas[i]);
 			escribir.print(" ");
-			
-		System.out.println("angela");	
+		
 		}
 		
 		escribir.close();
