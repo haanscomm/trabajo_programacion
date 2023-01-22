@@ -12,9 +12,28 @@ import ficheros.*;
 
 public class introducirNotasAlumnos {
 	
-	
+	public static void main(String asignatura, int opcion) throws IOException {
+		
+		File fichero1 = new File("alumnos.txt");
+		int[] notas = new int[contarLineasFichero(fichero1)];
+		
+		if(opcion == 1) {
+			introducirNotas(asignatura, notas);
+		}else if (opcion == 2) {
+			calcularMedia(asignatura, notas);
+		}else if (opcion == 3) {
+			calcularModa(asignatura, notas);
+		}else if (opcion == 4) {
+			calcularNotaMasAlta(asignatura, notas);
+		}else {
+			calcularNotaMasBaja(asignatura, notas);
+		}
+		
+		
+		
+	}
 
-	public static void introducirNotas(String asignatura) throws IOException {
+	public static void introducirNotas(String asignatura, int [] notas) throws IOException {
 
 		Scanner l = new Scanner(System.in);
 		String asignatura2 = asignatura + ".txt";
@@ -43,7 +62,7 @@ public class introducirNotasAlumnos {
 		// Exploramos fichero dni_alumnos y lo introducimos en uno nuevo
 		Scanner lectura_fichero = new Scanner(fichero1);
 
-		int[] notas = new int[contarLineasFichero(fichero1)];
+
 
 		int i = 0;
 		while (lectura_fichero.hasNextLine()) {
@@ -68,7 +87,7 @@ public class introducirNotasAlumnos {
 
 	}
 
-	public static void calcularNotaMasAlta(String asignatura) throws IOException {
+	public static void calcularNotaMasAlta(String asignatura, int [] notas) throws IOException {
 
 		String asignaturaFichero = asignatura + ".txt";
 		File archivo = new File(asignaturaFichero);
@@ -79,21 +98,21 @@ public class introducirNotasAlumnos {
 		} else {
 			System.out.println("Por favor, introduzca las notas para calcular la nota mas alta.");
 
-			introducirNotas(asignatura);
+			introducirNotas(asignatura, notas);
 			System.out.println("Hola");
 		}
 
 	}
 
-	public static void calcularNotaMasBaja(String asignatura) {
+	public static void calcularNotaMasBaja(String asignatura, int [] notas) {
 
 	}
 
-	public static void calcularMedia(String asignatura) {
+	public static void calcularMedia(String asignatura, int [] notas) {
 
 	}
 
-	public static void calcularModa(String asignatura) {
+	public static void calcularModa(String asignatura, int [] notas) {
 
 	}
 
