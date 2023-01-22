@@ -42,16 +42,16 @@ public class profesor {
 			introducirNotasAlumnos.introducirNotas(asignatura);
 			break; 
 		case 2: 
-			calcularAlumnos.calcularMedia();
+			introducirNotasAlumnos.calcularMedia(asignatura);
 			break; 
 		case 3: 
-			calcularAlumnos.calcularModa();
+			introducirNotasAlumnos.calcularModa(asignatura);
 			break; 
 		case 4: 
-			introducirNotasAlumnos.calcularNotaMasAlta();
+			introducirNotasAlumnos.calcularNotaMasAlta(asignatura);
 			break; 
 		case 5: 
-			introducirNotasAlumnos.calcularNotaMasBaja();
+			introducirNotasAlumnos.calcularNotaMasBaja(asignatura);
 			break; 
 		default: 
 			System.out.println("Introduce un la opcion válida\n");
