@@ -43,6 +43,13 @@ public class introducirNotasAlumnos {
 		
 		//creamos un array de la asignatura 
 		
+		System.out.println(asignatura);
+		
+		
+		String asignatura2 = asignatura + ".txt";
+		
+		
+		System.out.println(asignatura2);
 		
 		//Exploramos fichero dni_alumnos y lo introducimos en uno nuevo
 		Scanner lectura_fichero = new Scanner(fichero1); 
@@ -86,6 +93,28 @@ public class introducirNotasAlumnos {
 	public static void calcularNotaMasBaja() {
 
 	}
+	
+	public static void calcularMedia(String asignatura) {
+
+	}
+	
+	public static void calcularModa(String asignatura) {
+
+	}
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	public static int contarLineasFichero(File fichero1) throws IOException {
 		Scanner lectura_fichero = new Scanner(fichero1); 
@@ -101,5 +130,6 @@ public class introducirNotasAlumnos {
 		
 		return lineasTotal;
 	}
+	
 
 }
