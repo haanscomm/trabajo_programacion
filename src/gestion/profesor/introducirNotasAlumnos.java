@@ -68,7 +68,6 @@ public class introducirNotasAlumnos {
 			String datos = lectura_fichero.nextLine();
 			salida.print("Alumno con DNI:");
 			salida.println(datos);
-<<<<<<< Updated upstream
 
 			System.out.println("Introduzca la nota para el alumno " + datos + ": ");
 			double nota1 = l.nextDouble();
@@ -92,8 +91,7 @@ public class introducirNotasAlumnos {
 				
 			}
 
-=======
-			for(int i = 1; i <= 15; i++) {
+		/*for(int i = 1; i <= 15; i++) {
 				System.out.println("Introduce la nota del alumno " + i + ": ");
 				double nota = l.nextDouble();
 				if(nota > 0 && nota < 10) {
@@ -103,20 +101,15 @@ public class introducirNotasAlumnos {
 					System.out.println("Introduce la nota del alumno " + i + ": ");
 					nota = l.nextDouble();
 				 }
-				}
-				Scanner leer = new Scanner(new FileReader(fichero));
-				leer.close();
-				salida.close();
->>>>>>> Stashed changes
+				}*/
+
 		}
 
 		lectura_fichero.close();
 		salida.close();
-<<<<<<< Updated upstream
+
 		l.close();
-=======
-	
->>>>>>> Stashed changes
+
 
 	}
 
