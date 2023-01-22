@@ -74,9 +74,7 @@ public class introducirNotasAlumnos {
 			double nota1 = l.nextDouble();
 			
 			if (nota1 > 0 && nota1 < 10) {
-				
-			
-
+	
 			notas[i] = (int) nota1;
 			salida.println("nota:" + notas[i]);
 
@@ -85,13 +83,16 @@ public class introducirNotasAlumnos {
 			} else {
 				
 				System.out.println("La nota tiene que ser entre 0 y 10");
-				 Scanner leer = new Scanner(new FileReader(fichero));
+				System.out.println("Introduzca la nota para el alumno " + datos + ": ");
 				nota1 = l.nextDouble();
+				notas[i] = (int) nota1;
+				salida.println("nota:" + notas[i]);
+
+				i++;
+				
 			}
 
 		}
-		
-		 Scanner leer = new Scanner(new FileReader(fichero));
 
 		lectura_fichero.close();
 		salida.close();
