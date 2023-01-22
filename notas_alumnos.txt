@@ -1,0 +1,18 @@
+<<<<<<< Updated upstream
+=======
+Alumno con DNI:72384207A
+Alumno con DNI:93451554W
+Alumno con DNI:54936892D
+Alumno con DNI:57443714L
+Alumno con DNI:18227558D
+Alumno con DNI:18240291R
+Alumno con DNI:86973535W
+Alumno con DNI:10639915Q
+Alumno con DNI:98909566C
+Alumno con DNI:91025042D
+Alumno con DNI:75332333Z
+Alumno con DNI:89530428I
+Alumno con DNI:38782713C
+Alumno con DNI:75878489K
+Alumno con DNI:67038415J
+>>>>>>> Stashed changes
