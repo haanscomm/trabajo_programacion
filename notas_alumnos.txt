@@ -1,15 +1,30 @@
-Alumno con DNI:97858560Q
-Alumno con DNI:48409822X
-Alumno con DNI:59783855W
-Alumno con DNI:95224539O
-Alumno con DNI:91167148W
-Alumno con DNI:24620217Y
-Alumno con DNI:90365978F
-Alumno con DNI:55653978T
-Alumno con DNI:53546961K
-Alumno con DNI:84025096W
-Alumno con DNI:74616758X
-Alumno con DNI:23489609O
-Alumno con DNI:43194314H
-Alumno con DNI:18862274X
-Alumno con DNI:36972060X
+Alumno con DNI:42906417P
+nota:5
+Alumno con DNI:39611759P
+nota:6
+Alumno con DNI:55405339L
+nota:7
+Alumno con DNI:69817974E
+nota:8
+Alumno con DNI:88285932L
+nota:5
+Alumno con DNI:37861455Y
+nota:4
+Alumno con DNI:50778146S
+nota:3
+Alumno con DNI:38842309W
+nota:2
+Alumno con DNI:83885245F
+nota:9
+Alumno con DNI:24297286K
+nota:6
+Alumno con DNI:25940646T
+nota:4
+Alumno con DNI:78466094I
+nota:3
+Alumno con DNI:17290652S
+nota:4
+Alumno con DNI:36602732R
+nota:2
+Alumno con DNI:59014035G
+nota:4

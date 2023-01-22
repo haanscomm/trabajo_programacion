@@ -1,6 +1,7 @@
 package gestion.profesor;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -10,7 +11,6 @@ import java.util.Scanner;
 import ficheros.*;
 
 public class introducirNotasAlumnos {
-
 
 	public static void introducirNotas(String asignatura) throws IOException {
 		
@@ -47,47 +47,59 @@ public class introducirNotasAlumnos {
 		//Exploramos fichero dni_alumnos y lo introducimos en uno nuevo
 		Scanner lectura_fichero = new Scanner(fichero1); 
 		
+		int [] notas = new int [contarLineasFichero(fichero1)];
+		
+			
+			int i = 0;
+			while(lectura_fichero.hasNextLine()) {
+				
+				String datos = lectura_fichero.nextLine();
+				salida.print("Alumno con DNI:");
+				salida.println(datos);
+				
+
+				System.out.println("Introduzca la nota para el alumno " + datos + ": ");
+				int nota1 = l.nextInt();
+				
+				notas[i] = nota1;
+				salida.println("nota:" + notas[i]);
+				
+				i++;
+				
+			}
+			
+			lectura_fichero.close();
+			salida.close();
+			l.close();
+		
+			
+		
+		
+		
+	}
+
+	public static void calcularNotaMasAlta() {
+		// HOLA BUENAS
+
+	}
+
+	public static void calcularNotaMasBaja() {
+
+	}
+
+	public static int contarLineasFichero(File fichero1) throws IOException {
+		Scanner lectura_fichero = new Scanner(fichero1); 
+		int lineasTotal = 0; 
+		
 		while(lectura_fichero.hasNextLine()) {
-			
-			String datos = lectura_fichero.nextLine();
-			salida.print("Alumno con DNI:");
-			salida.println(datos);
-			
-			
-			
-			
-			
+			lectura_fichero.nextLine();
+			lineasTotal++;
 			
 		}
 		
 		lectura_fichero.close();
-		salida.close();
-
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	}
-	
-	public static void calcularNotaMasAlta() {
-		//HOLA BUENAS
-		
-	}
-	
-	public static void calcularNotaMasBaja() {
-		
+		return lineasTotal;
 	}
 
 }
