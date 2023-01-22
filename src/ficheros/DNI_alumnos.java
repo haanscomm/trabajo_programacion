@@ -16,10 +16,10 @@ public class DNI_alumnos {
 		
 		PrintWriter escribir = new PrintWriter(fichero);
 		
-		int [] numeroDNI = new int [5];
+		int [] numeroDNI = new int [15];
 	
 		
-		escribir.println("Existen " + numeroDNI.length + " alumnos");
+		//escribir.println("Existen " + numeroDNI.length + " alumnos");
 		
 		
 		for (int i = 0; i < numeroDNI.length; i++) {

@@ -1,11 +1,12 @@
 package gestion.profesor;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class profesor {
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		
 		Scanner leer = new Scanner(System.in);
@@ -18,11 +19,11 @@ public class profesor {
 		asignatura.toUpperCase();
 		
 		mostrarMenu(asignatura);
-		System.out.println("Prueba");
+		
 		
 	}
 	
-	public static void mostrarMenu(String asignatura) throws FileNotFoundException {
+	public static void mostrarMenu(String asignatura) throws IOException {
 		
 		Scanner l = new Scanner(System.in);
 		
