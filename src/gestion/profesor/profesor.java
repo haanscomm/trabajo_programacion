@@ -29,8 +29,8 @@ public class profesor {
 		System.out.println("1.Introducir notas de los alumnos");
 		System.out.println("2.Calcular la media de la asignatura");
 		System.out.println("3.Calcular la moda de la asignatura");
-		System.out.println("4.El DNI de la nota más alta");
-		System.out.println("5.El DNI de la nota más baja");
+		System.out.println("4.El DNI de la nota mas alta");
+		System.out.println("5.El DNI de la nota mas baja");
 		
 		int num = l.nextInt();
 		

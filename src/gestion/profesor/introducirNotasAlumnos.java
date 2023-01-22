@@ -73,7 +73,7 @@ public class introducirNotasAlumnos {
 			System.out.println("Introduzca la nota para el alumno " + datos + ": ");
 			double nota1 = l.nextDouble();
 			
-			if (nota1 > 0 && nota1 < 10) {
+			if (nota1 >= 0 && nota1 <= 10) {
 	
 			notas[i] = (int) nota1;
 			salida.println("nota:" + notas[i]);
