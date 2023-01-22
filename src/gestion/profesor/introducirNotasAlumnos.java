@@ -15,6 +15,7 @@ public class introducirNotasAlumnos {
 		Scanner leer = new Scanner (System.in);
 		File fichero = new File("notas_alumnos.txt");
 		PrintWriter escribir = new PrintWriter(fichero);
+		System.out.println();
 		
 		
 		//creamos el fichero dni_alumnos
