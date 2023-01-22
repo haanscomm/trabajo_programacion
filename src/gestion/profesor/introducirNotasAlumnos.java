@@ -1,7 +1,6 @@
 package gestion.profesor;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -61,25 +60,38 @@ public class introducirNotasAlumnos {
 
 		// Exploramos fichero dni_alumnos y lo introducimos en uno nuevo
 		Scanner lectura_fichero = new Scanner(fichero1);
-
-
-
+		
+		
 		int i = 0;
 		while (lectura_fichero.hasNextLine()) {
+			
 
 			String datos = lectura_fichero.nextLine();
 			salida.print("Alumno con DNI:");
 			salida.println(datos);
 
 			System.out.println("Introduzca la nota para el alumno " + datos + ": ");
-			int nota1 = l.nextInt();
+			double nota1 = l.nextDouble();
+			
+			if (nota1 > 0 && nota1 < 10) {
+				
+			
 
-			notas[i] = nota1;
+			notas[i] = (int) nota1;
 			salida.println("nota:" + notas[i]);
 
 			i++;
+			
+			} else {
+				
+				System.out.println("La nota tiene que ser entre 0 y 10");
+				 Scanner leer = new Scanner(new FileReader(fichero));
+				nota1 = l.nextDouble();
+			}
 
 		}
+		
+		 Scanner leer = new Scanner(new FileReader(fichero));
 
 		lectura_fichero.close();
 		salida.close();

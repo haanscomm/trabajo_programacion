@@ -1,30 +1,29 @@
-Alumno con DNI:71915282P
-nota:5
-Alumno con DNI:51916601D
-nota:6
-Alumno con DNI:83051527V
-nota:7
-Alumno con DNI:15496988E
+Alumno con DNI:16574757G
 nota:4
-Alumno con DNI:16349555Y
+Alumno con DNI:22014818Q
 nota:5
-Alumno con DNI:11373138U
-nota:3
-Alumno con DNI:81435052A
-nota:2
-Alumno con DNI:35090850R
-nota:1
-Alumno con DNI:39158249F
-nota:7
-Alumno con DNI:32810216R
-nota:9
-Alumno con DNI:78431477Y
+Alumno con DNI:80839676D
 nota:5
-Alumno con DNI:16895309H
-nota:6
-Alumno con DNI:53910787U
-nota:7
-Alumno con DNI:62568946V
-nota:4
-Alumno con DNI:16203752V
+Alumno con DNI:48780709P
+nota:5
+Alumno con DNI:63263910L
+nota:5
+Alumno con DNI:53303163Z
+nota:5
+Alumno con DNI:15376851K
+nota:5
+Alumno con DNI:32839163J
+Alumno con DNI:31253036H
+nota:5
+Alumno con DNI:55130042O
+nota:5
+Alumno con DNI:67980434W
+nota:5
+Alumno con DNI:82747722W
+nota:5
+Alumno con DNI:14901113S
+nota:5
+Alumno con DNI:52380816L
+nota:5
+Alumno con DNI:96631665K
 nota:5

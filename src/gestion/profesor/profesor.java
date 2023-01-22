@@ -1,6 +1,4 @@
 package gestion.profesor;
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -12,7 +10,7 @@ public class profesor {
 		Scanner leer = new Scanner(System.in);
 		 
 		System.out.println("Introduzca la asignatura que desee gestionar:");
-		System.out.println(" MATÉMATICAS LENGUA FÍSICA  QUÍMICA  HISTORIA  INGLES");
+		System.out.println(" MATEMATICAS LENGUA FISICA  QUIMICA  HISTORIA  INGLES");
 		
 		String asignatura = leer.next(); 
 		System.out.println(" ");
