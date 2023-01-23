@@ -14,11 +14,13 @@ public class introducirNotasAlumnos {
 	public static void principal(String asignatura, int opcion) throws IOException {
 
 		if (opcion == 1) {
+			
 			introducirNotas(asignatura);
+			
 		} else if (opcion == 2) {
 
-			//int media = calcularMedia(asignatura);
-			//System.out.println("La nota media es : " + media);
+			calcularMedia(asignatura);
+			
 
 		} else if (opcion == 3) {
 
@@ -28,12 +30,13 @@ public class introducirNotasAlumnos {
 
 			calcularNotaMasAlta(asignatura);
 
-		} else {
-			// int min = calcularNotaMasBaja(asignatura);
-			// System.out.println("La nota minima es : " + min);
+		} else if(opcion == 5) {
 
 			calcularNotaMasBaja(asignatura);
 
+		} else {
+			
+			System.out.println("ERROR. Introduzca un número válido. ");
 		}
 
 	}
@@ -98,11 +101,7 @@ public class introducirNotasAlumnos {
 				i++;
 
 			}
-
-			//salida.print("Alumno con DNI:");
-			//salida.println(datos);
 			
-
 		}
 
 		lectura_fichero.close();
@@ -199,27 +198,23 @@ public class introducirNotasAlumnos {
 	}
 
 	public static void calcularMedia(String asignatura) throws IOException {
-
-		int media = 0;
-		int sumanotas = 0;
-		File fichero = new File("ingles.txt");
-
-		/*
-		 * for (int i = 0; i < notas.length; i++) { sumanotas += notas[i]; } media =
-		 * sumanotas / notas.length;
-		 */
-
-		Scanner leer = new Scanner(fichero);
-		Scanner leer1 = new Scanner(fichero);
-
-		// primero leemos archivo
-		while (leer1.hasNextLine()) {
-			String linea = leer1.nextLine();
-			System.out.println(linea);
-		}
-		leer1.close();
-		//double nota = Double.parseDouble(sumanotas);
-
+		
+		
+		    Scanner leer = new Scanner(new File("ingles.txt"));
+		    double sumaNotas = 0;
+		    int contadorNotas = 0;
+		    
+		    while(leer.hasNextLine()) {
+		        String linea = leer.nextLine();
+		        String[] partes = linea.split(" ");
+		        double nota = Double.parseDouble(partes[2]);
+		        sumaNotas += nota;
+		        contadorNotas++;
+		    }
+		    
+		    leer.close();
+		    System.out.printf("La nota media es: %.2f" ,sumaNotas / contadorNotas);
+		
 	}
 
 	public static void calcularModa(String asignatura) throws IOException {
