@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class asignaturas {
 
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
+	
 
 		File fichero = new File ("asignaturas.txt");
 		
@@ -26,19 +26,7 @@ public class asignaturas {
 		}
 		
 		escribir.close();
-		
-
-		Scanner lectura_fichero = new Scanner (fichero); 
-		
-	
-		while(lectura_fichero.hasNextLine()) {
 			
-			String datos = lectura_fichero.nextLine();
-			System.out.println(datos);
-		}
-		lectura_fichero.close();
-		
-		
 	}
 
 }

@@ -156,8 +156,8 @@ public class introducirNotasAlumnos {
 
 		
 
-		// String notasAsignatura = "ingles.txt";
-		File fichero = new File("ingles.txt");
+		String asignatura2 = asignatura + ".txt";
+		File fichero = new File(asignatura2);
 
 		double min = Double.MAX_VALUE;
 		String dniMinNota = "";
@@ -198,8 +198,10 @@ public class introducirNotasAlumnos {
 
 	public static void calcularMedia(String asignatura) throws IOException {
 		
-		
-		    Scanner leer = new Scanner(new File("ingles.txt"));
+		String asignatura2 = asignatura + ".txt";
+		File fichero = new File(asignatura2);
+		    Scanner leer = new Scanner(fichero);
+		    
 		    double sumaNotas = 0;
 		    int contadorNotas = 0;
 		    
@@ -218,7 +220,8 @@ public class introducirNotasAlumnos {
 
 	public static void calcularModa(String asignatura) throws IOException {
 
-		File fichero = new File("ingles.txt");
+		String asignatura2 = asignatura + ".txt";
+		File fichero = new File(asignatura2);
 		
 		Scanner leer = new Scanner(fichero);
 		int[] contadorNotas = new int[15];

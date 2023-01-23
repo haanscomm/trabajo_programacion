@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 public class DNI_alumnos {
 
 	public static void dni_alumnos() throws IOException {
-		// TODO Auto-generated method stub
+		
 
 		//Escribir 
 		
