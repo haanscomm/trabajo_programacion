@@ -103,7 +103,7 @@ public class introducirNotasAlumnos {
 
 			salida.print("Alumno con DNI:");
 			salida.println(datos);
-			for(int i = 1; i <= 15; i++) {
+			/*for(int i = 1; i <= 15; i++) {
 				System.out.println("Introduce la nota del alumno " + i + ": ");
 				double nota = l.nextDouble();
 				if(nota > 0 && nota < 10) {
@@ -116,7 +116,7 @@ public class introducirNotasAlumnos {
 				}
 				Scanner leer = new Scanner(new FileReader(fichero));
 				leer.close();
-				salida.close();
+				salida.close();*/
 
 		}
 
@@ -235,15 +235,25 @@ public class introducirNotasAlumnos {
 	}
 	
 
-	public static int calcularMedia(String asignatura) {
+	public static void calcularMedia(String asignatura) throws IOException{
 
 		int media = 0;
 		int sumanotas = 0;
-		for (int i = 0; i < notas.length; i++) {
+		File fichero = new File("ingles.txt");
+		/*for (int i = 0; i < notas.length; i++) {
 			sumanotas += notas[i];
 		}
-		media = sumanotas / notas.length;
-		return media;
+		media = sumanotas / notas.length;*/
+		Scanner leer = new Scanner(fichero);
+		Scanner leer1 = new Scanner(fichero);
+		// primero leemos archivo
+
+		while (leer1.hasNextLine()) {
+			String linea = leer1.nextLine();
+			System.out.println(linea);
+		}
+		leer1.close();
+		
 
 	}
 
