@@ -1,41 +1,39 @@
 package gestion.profesor;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.Scanner;
 
-import ficheros.*;
+import ficheros.*; 
 
 public class introducirNotasAlumnos {
 
-	public static void main(String asignatura, int opcion) throws IOException {
+	public static void main(String[] args) throws IOException {
 
-		File fichero1 = new File("alumnos.txt");
-		int[] notas = new int[contarLineasFichero(fichero1)];
+	}
 
-		notas = introducirNotas(asignatura, notas);
+	public static void principal(String asignatura, int opcion) throws IOException {
 
-		if (opcion == 2) {
-
-			int media = calcularMedia(asignatura, notas);
+		if (opcion == 1) {
+			introducirNotas(asignatura);
+		}else if (opcion == 2) {
+			
+			int media = calcularMedia(asignatura);
 			System.out.println("La nota media es : " + media);
+			
 		} else if (opcion == 3) {
-
-			calcularModa(asignatura, notas);
+			calcularModa(asignatura);
 		} else if (opcion == 4) {
 
-			int max = calcularNotaMasAlta(asignatura, notas);
-			System.out.println("La nota maxima es : " + max);
+			calcularNotaMasAlta(asignatura);
+
 		} else {
-			int min = calcularNotaMasBaja(asignatura, notas);
-			System.out.println("La nota minima es : " + min);
+			// int min = calcularNotaMasBaja(asignatura);
+			// System.out.println("La nota minima es : " + min);
 		}
 
 	}
 
-	public static int[] introducirNotas(String asignatura, int[] notas) throws IOException {
+	public static void introducirNotas(String asignatura) throws IOException {
 
 		Scanner l = new Scanner(System.in);
 		String asignatura2 = asignatura + ".txt";
@@ -43,17 +41,23 @@ public class introducirNotasAlumnos {
 		File fichero1 = new File("alumnos.txt");
 		PrintWriter salida;
 
+		double[] notas = new double[contarLineasFichero(fichero1)];
+
 		salida = new PrintWriter(new FileWriter(fichero));
 
 		DNI_alumnos.dni_alumnos();
 
 		Scanner lectura_fichero = new Scanner(fichero1);
 
+		
+		int totalLineas = 14; 
+		int lineaActual = 0;
+		
 		int i = 0;
 		while (lectura_fichero.hasNextLine()) {
 
 			String datos = lectura_fichero.nextLine();
-			salida.print("Alumno DNI:");
+			// salida.print("Alumno DNI:");
 			salida.print(datos + " ");
 
 			System.out.println("Introduzca la nota para el alumno " + datos + ": ");
@@ -61,8 +65,15 @@ public class introducirNotasAlumnos {
 
 			if (nota1 >= 0 && nota1 <= 10) {
 
-				notas[i] = (int) nota1;
-				salida.println("nota:" + notas[i]);
+				notas[i] = nota1;
+				// salida.println("nota;" + notas[i] + ";");
+				salida.print(" " + notas[i]);
+				
+				if (lineaActual < totalLineas) {
+			        salida.print("\n");
+			    }
+				
+				lineaActual ++; 
 
 				i++;
 
@@ -71,9 +82,14 @@ public class introducirNotasAlumnos {
 				System.out.println("La nota tiene que ser entre 0 y 10");
 				System.out.println("Introduzca la nota para el alumno " + datos + ": ");
 				nota1 = l.nextDouble();
-				notas[i] = (int) nota1;
-				salida.println("nota:" + notas[i]);
+				notas[i] = nota1;
+				salida.print(" " + notas[i] );
 
+				if (lineaActual < totalLineas) {
+			        salida.print("\n");
+			    }
+				
+				lineaActual ++; 
 				i++;
 
 			}
@@ -85,30 +101,63 @@ public class introducirNotasAlumnos {
 
 		l.close();
 
-		return notas;
+	
 
 	}
 
-	public static int calcularNotaMasAlta(String asignatura, int[] notas) throws IOException {
-		int max = 0;
+	public static void calcularNotaMasAlta(String asignatura) throws IOException {
 
-		for (int i = 0; i < notas.length; i++) {
-			if (max < notas[i]) {
-				max = notas[i];
+		//String notasAsignatura = "ingles.txt";
+		File fichero = new File("ingles.txt");
+
+		double max = 0;
+		String dniMaxNota = "";
+
+		Scanner leer = new Scanner(fichero);
+		Scanner leer1 = new Scanner(fichero);
+		// primero leemos archivo
+
+		while (leer1.hasNextLine()) {
+			String linea = leer1.nextLine();
+			System.out.println(linea);
+		}
+		leer1.close();
+
+		// agrupamos para sacar el maximo DEL FICHERO
+
+		while (leer.hasNextLine()) {
+			
+			String linea = leer.nextLine();
+			String[] partes = linea.split(" ");
+
+			String dni = partes[0];
+			
+			double nota = Double.parseDouble(partes[1]);
+				if (nota > max) {
+					max = nota;
+					dniMaxNota = dni;
 			}
 
 		}
+		leer.close();
 
-		return max;
+		System.out.println("La nota mas alta es " + max + "con DNI:" + dniMaxNota);
 
 	}
 
-	public static int calcularNotaMasBaja(String asignatura, int[] notas) {
+	
+	
+	
+	
+	
+	
+	
+	public static int calcularNotaMasBaja(String asignatura) {
 
 		int min = 0;
 
 		for (int i = 0; i < notas.length; i++) {
-			if (min < notas[i]) {
+			if (min > notas[i]) {
 				min = notas[i];
 			}
 
@@ -117,7 +166,7 @@ public class introducirNotasAlumnos {
 		return min;
 	}
 
-	public static int calcularMedia(String asignatura, int[] notas) {
+	public static int calcularMedia(String asignatura) {
 
 		int media = 0;
 		int sumanotas = 0;
@@ -129,10 +178,16 @@ public class introducirNotasAlumnos {
 
 	}
 
-	public static void calcularModa(String asignatura, int[] notas) {
+	public static void calcularModa(String asignatura) {
+		
+		
 
 	}
 
+	
+	
+	
+	
 	public static int contarLineasFichero(File fichero1) throws IOException {
 		Scanner lectura_fichero = new Scanner(fichero1);
 		int lineasTotal = 0;

@@ -37,19 +37,19 @@ public class profesor {
 		switch(num) {
 		
 		case 1: 
-			introducirNotasAlumnos.main(asignatura, num);
+			introducirNotasAlumnos.principal(asignatura, num);
 			break; 
 		case 2: 
-			introducirNotasAlumnos.main(asignatura, num);
+			introducirNotasAlumnos.principal(asignatura, num);
 			break; 
 		case 3: 
-			introducirNotasAlumnos.main(asignatura, num);
+			introducirNotasAlumnos.principal(asignatura, num);
 			break; 
 		case 4: 
-			introducirNotasAlumnos.main(asignatura, num);
+			introducirNotasAlumnos.principal(asignatura, num);
 			break; 
 		case 5: 
-			introducirNotasAlumnos.main(asignatura, num);
+			introducirNotasAlumnos.principal(asignatura, num);
 			break; 
 		default: 
 			System.out.println("Introduce un la opcion válida\n");

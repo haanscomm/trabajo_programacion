@@ -6,6 +6,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class DNI_alumnos {
+	
+	public static void main(String[] args) throws IOException {
+		
+		dni_alumnos();
+		
+	}
+	
+	
 
 	public static void dni_alumnos() throws FileNotFoundException {
 		// TODO Auto-generated method stub
@@ -18,7 +26,8 @@ public class DNI_alumnos {
 		
 		int [] numeroDNI = new int [15];
 	
-		
+		int totalLineas = 14; 
+		int lineaActual = 0;
 		//escribir.println("Existen " + numeroDNI.length + " alumnos");
 		
 		
@@ -27,7 +36,13 @@ public class DNI_alumnos {
 			numeroDNI[i] = obtenerDNI();
 		//	escribir.print("DNI Alumno " + (i+1) + ": ");
 			escribir.print(numeroDNI[i]);
-			escribir.println(obtenerLetra(numeroDNI[i]));
+			escribir.print(obtenerLetra(numeroDNI[i]));
+			
+			if (lineaActual < totalLineas) {
+		        escribir.print("\n");
+		    }
+			
+			lineaActual ++; 
 		}
 		
 		escribir.close();
