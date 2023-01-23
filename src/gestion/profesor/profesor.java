@@ -35,6 +35,11 @@ public class profesor {
 		
 		Scanner l = new Scanner(System.in);
 		
+		int num;
+		
+		do {
+			
+		
 		System.out.println("Elija una opcion:");
 		System.out.println("1.Introducir notas de los alumnos");
 		System.out.println("2.Calcular la media de la asignatura");
@@ -42,8 +47,11 @@ public class profesor {
 		System.out.println("4.El DNI de la nota mas alta");
 		System.out.println("5.El DNI de la nota mas baja");
 		
-		int num = l.nextInt();
 		
+		num = l.nextInt();
+		
+		} while(num > 5 && num < 1);
+			
 		switch(num) {
 		
 		case 1: 
