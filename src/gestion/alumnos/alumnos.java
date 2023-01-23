@@ -1,20 +1,25 @@
-package gestion.profesor;
+package gestion.alumnos;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-public class profesor {
+import gestion.profesor.introducirNotasAlumnos;
 
-	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
+public class alumnos {
 
-		Scanner leer = new Scanner(System.in);
-
-		boolean opcion = false;
-
-		do {
-			System.out.println("Introduzca la asignatura que desee gestionar:");
-			System.out.println(" MATEMATICAS LENGUA FISICA  QUIMICA  HISTORIA  INGLES");
+	public static void main(String[] args)throws IOException {
+		
+		    Scanner leer = new Scanner(System.in);
+			System.out.println("Introduzca el DNI del alumno: ");
+			String DNI = leer.next();
+			
+			Scanner leer1 = new Scanner("alumnos.txt");
+			while (leer1.hasNextLine()) {
+				String linea = leer1.nextLine();
+				System.out.println(linea);
+			}
+			
+			leer1.close();
 
 			String asignatura = leer.next();
 			System.out.println(" ");
@@ -29,10 +34,6 @@ public class profesor {
 				mostrarMenu(asignatura);
 			}
 
-		} while (opcion);
-
-	}
-
 	public static void mostrarMenu(String asignatura) throws IOException {
 
 		Scanner l = new Scanner(System.in);
@@ -42,15 +43,14 @@ public class profesor {
 		do {
 
 			System.out.println("Elija una opcion:");
-			System.out.println("1.Introducir notas de los alumnos");
-			System.out.println("2.Calcular la media de la asignatura");
-			System.out.println("3.Calcular la moda de la asignatura");
-			System.out.println("4.El DNI de la nota mas alta");
-			System.out.println("5.El DNI de la nota mas baja");
+			System.out.println("1.Asignatura donde ha sacado mayor nota.");
+			System.out.println("2.Asignatura en la que menor nota ha sacado.");
+			System.out.println("3.Notas de todas las asignaturas.");
+			System.out.println("4.La media global de todas las asignaturas.");
 
 			num = l.nextInt();
 
-		} while (num > 5 && num < 1);
+		} while (num > 4 && num < 0);
 
 		switch (num) {
 
@@ -76,5 +76,9 @@ public class profesor {
 		}
 
 	}
+
+}
+
+}
 
 }
