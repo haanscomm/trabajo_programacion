@@ -9,16 +9,26 @@ public class profesor {
 		
 		Scanner leer = new Scanner(System.in);
 		 
-		System.out.println("Introduzca la asignatura que desee gestionar:");
-		System.out.println(" MATEMATICAS LENGUA FISICA  QUIMICA  HISTORIA  INGLES");
+		boolean opcion = false; 
 		
-		String asignatura = leer.next(); 
-		System.out.println(" ");
-		asignatura.toUpperCase();
-		
-		mostrarMenu(asignatura);
-		
-		
+		do {
+		    System.out.println("Introduzca la asignatura que desee gestionar:");
+		    System.out.println(" MATEMATICAS LENGUA FISICA  QUIMICA  HISTORIA  INGLES");
+		    
+		    String asignatura = leer.next(); 
+		    System.out.println(" ");
+		    asignatura = asignatura.toUpperCase();
+		    
+		    if (!asignatura.equals("MATEMATICAS") && !asignatura.equals("LENGUA") && !asignatura.equals("FISICA") && !asignatura.equals("QUIMICA") && !asignatura.equals("HISTORIA") && !asignatura.equals("INGLES")) {
+		        System.out.println("ERROR. Introduce una asignatura válida");
+		        opcion = true;
+		    } else {
+		        mostrarMenu(asignatura);
+		    }
+
+		} while(opcion);
+
+
 	}
 	
 	public static void mostrarMenu(String asignatura) throws IOException {

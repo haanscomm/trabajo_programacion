@@ -21,7 +21,6 @@ public class introducirNotasAlumnos {
 
 			calcularMedia(asignatura);
 			
-
 		} else if (opcion == 3) {
 
 			calcularModa(asignatura);
@@ -113,8 +112,8 @@ public class introducirNotasAlumnos {
 
 	public static void calcularNotaMasAlta(String asignatura) throws IOException {
 
-		// String notasAsignatura = "ingles.txt";
-		File fichero = new File("ingles.txt");
+		String asignatura2 = asignatura + ".txt";
+		File fichero = new File(asignatura2);
 
 		double max = 0;
 		String dniMaxNota = "";
