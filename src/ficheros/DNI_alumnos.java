@@ -1,21 +1,12 @@
 package ficheros;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 
 public class DNI_alumnos {
-	
-	public static void main(String[] args) throws IOException {
-		
-		dni_alumnos();
-		
-	}
-	
-	
 
-	public static void dni_alumnos() throws FileNotFoundException {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
 		//Escribir 
@@ -26,9 +17,8 @@ public class DNI_alumnos {
 		
 		int [] numeroDNI = new int [15];
 	
-		int totalLineas = 14; 
-		int lineaActual = 0;
-		//escribir.println("Existen " + numeroDNI.length + " alumnos");
+		
+		escribir.println("Existen " + numeroDNI.length + " alumnos");
 		
 		
 		for (int i = 0; i < numeroDNI.length; i++) {
@@ -36,13 +26,7 @@ public class DNI_alumnos {
 			numeroDNI[i] = obtenerDNI();
 		//	escribir.print("DNI Alumno " + (i+1) + ": ");
 			escribir.print(numeroDNI[i]);
-			escribir.print(obtenerLetra(numeroDNI[i]));
-			
-			if (lineaActual < totalLineas) {
-		        escribir.print("\n");
-		    }
-			
-			lineaActual ++; 
+			escribir.println(obtenerLetra(numeroDNI[i]));
 		}
 		
 		escribir.close();
