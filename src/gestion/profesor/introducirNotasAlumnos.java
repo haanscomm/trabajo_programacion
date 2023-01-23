@@ -21,7 +21,9 @@ public class introducirNotasAlumnos {
 			System.out.println("La nota media es : " + media);
 			
 		} else if (opcion == 3) {
+			
 			calcularModa(asignatura);
+			
 		} else if (opcion == 4) {
 
 			calcularNotaMasAlta(asignatura);
@@ -29,6 +31,9 @@ public class introducirNotasAlumnos {
 		} else {
 			// int min = calcularNotaMasBaja(asignatura);
 			// System.out.println("La nota minima es : " + min);
+			
+			calcularNotaMasBaja(asignatura);
+			
 		}
 
 	}
@@ -174,7 +179,7 @@ public class introducirNotasAlumnos {
 	
 	
 	
-	public static int calcularNotaMasBaja(String asignatura) {
+	public static void calcularNotaMasBaja(String asignatura) throws IOException {
 
 		/*int min = 0;
 
@@ -190,7 +195,7 @@ public class introducirNotasAlumnos {
 		//String notasAsignatura = "ingles.txt";
 				File fichero = new File("ingles.txt");
 
-				double min = 0;
+				double min = Double.MAX_VALUE;
 				String dniMinNota = "";
 
 				Scanner leer = new Scanner(fichero);
@@ -203,7 +208,7 @@ public class introducirNotasAlumnos {
 				}
 				leer1.close();
 
-				// agrupamos para sacar el maximo DEL FICHERO
+				// agrupamos para sacar el mínimo DEL FICHERO
 
 				while (leer.hasNextLine()) {
 					
@@ -215,17 +220,17 @@ public class introducirNotasAlumnos {
 					String dni = partes[0];
 					
 					double nota = Double.parseDouble(partes[2]);
-						if (nota > max) {
-							max = nota;
-							dniMaxNota = dni;
+						if (nota < min) {
+							min = nota;
+							dniMinNota = dni;
 					}
 
 				}
 				leer.close();
 
-				System.out.println("La nota mas alta es " + max + " con DNI:" + dniMaxNota);
+				System.out.println("La nota mas baja es " + min + " con DNI:" + dniMinNota);
 
-			}
+			
 		
 	}
 	
