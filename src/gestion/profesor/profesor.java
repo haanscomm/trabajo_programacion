@@ -33,48 +33,47 @@ public class profesor {
 
 	}
 
-	public static void mostrarMenu(String asignatura) throws IOException {
+	 public static void mostrarMenu(String asignatura) throws IOException {
 
-		Scanner l = new Scanner(System.in);
+	        Scanner l = new Scanner(System.in);
 
-		int num;
+	        System.out.println("Elija una opcion:");
+	        System.out.println("1.Introducir notas de los alumnos");
+	        System.out.println("2.Calcular la media de la asignatura");
+	        System.out.println("3.Calcular la moda de la asignatura");
+	        System.out.println("4.El DNI de la nota mas alta");
+	        System.out.println("5.El DNI de la nota mas baja");
 
-		do {
+	        int num = l.nextInt();
 
-			System.out.println("Elija una opcion:");
-			System.out.println("1.Introducir notas de los alumnos");
-			System.out.println("2.Calcular la media de la asignatura");
-			System.out.println("3.Calcular la moda de la asignatura");
-			System.out.println("4.El DNI de la nota mas alta");
-			System.out.println("5.El DNI de la nota mas baja");
+	        switch(num) {
 
-			num = l.nextInt();
+	        case 1: 
+	            introducirNotasAlumnos.principal(asignatura, num);
+	            break; 
+	        case 2: 
+	            introducirNotasAlumnos.principal(asignatura, num);
+	            break; 
+	        case 3: 
+	            introducirNotasAlumnos.principal(asignatura, num);
+	            break; 
+	        case 4: 
+	            introducirNotasAlumnos.principal(asignatura, num);
+	            break; 
+	        case 5: 
+	            introducirNotasAlumnos.principal(asignatura, num);
+	            break; 
+	        default: 
+	            System.out.println("Introduce un la opcion válida\n");
 
-		} while (num > 5 && num < 1);
 
-		switch (num) {
 
-		case 1:
-			introducirNotasAlumnos.principal(asignatura, num);
-			break;
-		case 2:
-			introducirNotasAlumnos.principal(asignatura, num);
-			break;
-		case 3:
-			introducirNotasAlumnos.principal(asignatura, num);
-			break;
-		case 4:
-			introducirNotasAlumnos.principal(asignatura, num);
-			break;
-		case 5:
-			introducirNotasAlumnos.principal(asignatura, num);
-			break;
-		default:
-			System.out.println("Introduce un la opcion válida\n");
-			break;
+	        }
 
-		}
+
+	    }
+
+
+
 
 	}
-
-}
