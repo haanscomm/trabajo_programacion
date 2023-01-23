@@ -57,7 +57,7 @@ public class introducirNotasAlumnos {
 		while (lectura_fichero.hasNextLine()) {
 
 			String datos = lectura_fichero.nextLine();
-<<<<<<< Updated upstream
+
 			// salida.print("Alumno DNI:");
 			salida.print(datos + " ");
 
@@ -95,7 +95,7 @@ public class introducirNotasAlumnos {
 
 			}
 
-=======
+
 			salida.print("Alumno con DNI:");
 			salida.println(datos);
 			for(int i = 1; i <= 15; i++) {
@@ -112,7 +112,7 @@ public class introducirNotasAlumnos {
 				Scanner leer = new Scanner(new FileReader(fichero));
 				leer.close();
 				salida.close();
->>>>>>> Stashed changes
+
 		}
 
 		lectura_fichero.close();
@@ -149,10 +149,12 @@ public class introducirNotasAlumnos {
 			
 			String linea = leer.nextLine();
 			String[] partes = linea.split(" ");
+			
+			//Coge el contenido del carácter q pongo
 
 			String dni = partes[0];
 			
-			double nota = Double.parseDouble(partes[1]);
+			double nota = Double.parseDouble(partes[2]);
 				if (nota > max) {
 					max = nota;
 					dniMaxNota = dni;
@@ -161,7 +163,7 @@ public class introducirNotasAlumnos {
 		}
 		leer.close();
 
-		System.out.println("La nota mas alta es " + max + "con DNI:" + dniMaxNota);
+		System.out.println("La nota mas alta es " + max + " con DNI:" + dniMaxNota);
 
 	}
 
@@ -174,7 +176,7 @@ public class introducirNotasAlumnos {
 	
 	public static int calcularNotaMasBaja(String asignatura) {
 
-		int min = 0;
+		/*int min = 0;
 
 		for (int i = 0; i < notas.length; i++) {
 			if (min > notas[i]) {
@@ -183,8 +185,50 @@ public class introducirNotasAlumnos {
 
 		}
 
-		return min;
+		return min;*/
+		
+		//String notasAsignatura = "ingles.txt";
+				File fichero = new File("ingles.txt");
+
+				double min = 0;
+				String dniMinNota = "";
+
+				Scanner leer = new Scanner(fichero);
+				Scanner leer1 = new Scanner(fichero);
+				// primero leemos archivo
+
+				while (leer1.hasNextLine()) {
+					String linea = leer1.nextLine();
+					System.out.println(linea);
+				}
+				leer1.close();
+
+				// agrupamos para sacar el maximo DEL FICHERO
+
+				while (leer.hasNextLine()) {
+					
+					String linea = leer.nextLine();
+					String[] partes = linea.split(" ");
+					
+					//Coge el contenido del carácter q pongo
+
+					String dni = partes[0];
+					
+					double nota = Double.parseDouble(partes[2]);
+						if (nota > max) {
+							max = nota;
+							dniMaxNota = dni;
+					}
+
+				}
+				leer.close();
+
+				System.out.println("La nota mas alta es " + max + " con DNI:" + dniMaxNota);
+
+			}
+		
 	}
+	
 
 	public static int calcularMedia(String asignatura) {
 
