@@ -1,5 +1,8 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 Alumno con DNI:72384207A
 Alumno con DNI:93451554W
 Alumno con DNI:54936892D
@@ -15,4 +18,7 @@ Alumno con DNI:89530428I
 Alumno con DNI:38782713C
 Alumno con DNI:75878489K
 Alumno con DNI:67038415J
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
