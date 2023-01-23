@@ -3,6 +3,8 @@ package gestion.profesor;
 import java.io.*;
 import java.util.Scanner;
 
+import ficheros.DNI_alumnos;
+
 public class introducirNotasAlumnos {
 
 	public static void main(String[] args) throws IOException {
@@ -50,7 +52,7 @@ public class introducirNotasAlumnos {
 
 		salida = new PrintWriter(new FileWriter(fichero));
 
-		//DNI_alumnos.dni_alumnos();
+		DNI_alumnos.dni_alumnos();
 
 		Scanner lectura_fichero = new Scanner(fichero1);
 

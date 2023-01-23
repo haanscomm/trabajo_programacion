@@ -20,19 +20,7 @@ public class alumnos {
 			}
 			
 			leer1.close();
-
-			String asignatura = leer.next();
-			System.out.println(" ");
-			asignatura = asignatura.toUpperCase();
-
-			if (!asignatura.equals("MATEMATICAS") && !asignatura.equals("LENGUA") && !asignatura.equals("FISICA")
-					&& !asignatura.equals("QUIMICA") && !asignatura.equals("HISTORIA")
-					&& !asignatura.equals("INGLES")) {
-				System.out.println("ERROR. Introduce una asignatura válida");
-				opcion = true;
-			} else {
-				mostrarMenu(asignatura);
-			}
+	}
 
 	public static void mostrarMenu(String asignatura) throws IOException {
 
@@ -55,20 +43,21 @@ public class alumnos {
 		switch (num) {
 
 		case 1:
-			introducirNotasAlumnos.principal(asignatura, num);
+			introducirDNIalumno.principal(asignatura, num);
 			break;
+			
 		case 2:
-			introducirNotasAlumnos.principal(asignatura, num);
+			introducirDNIalumno.principal(asignatura, num);
 			break;
+			
 		case 3:
-			introducirNotasAlumnos.principal(asignatura, num);
+			introducirDNIalumno.principal(asignatura, num);
 			break;
+			
 		case 4:
-			introducirNotasAlumnos.principal(asignatura, num);
+			introducirDNIalumno.principal(asignatura, num);
 			break;
-		case 5:
-			introducirNotasAlumnos.principal(asignatura, num);
-			break;
+			
 		default:
 			System.out.println("Introduce un la opcion válida\n");
 			break;
@@ -76,9 +65,8 @@ public class alumnos {
 		}
 
 	}
-
 }
 
-}
 
-}
+
+
